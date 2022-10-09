@@ -6,8 +6,8 @@ mongoose.connect("mongodb+srv://root:root@cluster0.avfdqfj.mongodb.net/taskmanag
 .then(()=>{
     console.log("Connected to D-Base!");
   })
-  .catch(()=>{
-    console.log("DBase connection Failed!");
+  .catch((error)=>{
+    console.log("Error occure while DB connection", error);
   });
 
 
