@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
 mongoose.connect("mongodb+srv://root:root@cluster0.avfdqfj.mongodb.net/taskmanagerdb")
+// ,{useNewUrlParser: true, useUnifiedTopology: true}
 .then(()=>{
     console.log("Connected to D-Base!");
   })
