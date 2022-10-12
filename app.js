@@ -15,10 +15,11 @@ frontend - http://localhost:4200
 app.use(
     (req, res, next)=>{
     res.setHeader("Access-Control-Allow-Origin","*");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
+    // res.setHeader(
+    //   "Access-Control-Allow-Headers",
+    //   "Origin, X-Requested-With, Content-Type, Accept"
+    // );
+    res.header("Access-Control-Allow-Headers", "Content-Type");
     res.setHeader(
       "Access-Control-Allow-Methods",
       "GET, POST, PATCH, PUT, OPTIONS, DELETE"
@@ -92,7 +93,7 @@ TaskList(taskListObj).save()
 //  app.patch("/tasklists/:tasklistId" ,(req, res)=>{
 //   TaskList.findOneAndUpdate({ _id: req.params.tasklistId}, {$set: req.body})
 //   .then((taskList)=>{
-//     res.status(200).send(taskList)
+//     res.status(200).send(taskList);
 //   })
 //   .catch((error)=>{console.log(error);
 //   });
